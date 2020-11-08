@@ -50,6 +50,7 @@
 </template>
 
 <script>
+const { Titlebar, Color } = window.require("custom-electron-titlebar");
 const { ipcRenderer } = window.require("electron");
 
 export default {
@@ -66,6 +67,10 @@ export default {
     };
   },
   mounted() {
+    new Titlebar({
+      backgroundColor: Color.fromHex("#262626"),
+    });
+
     ipcRenderer.on("filePathResponse", (event, arg) => {
       this.videoPathForm.videoPathUrl = arg;
     });
@@ -181,5 +186,14 @@ export default {
   bottom: 0;
   justify-content: center;
   align-items: center;
+}
+body {
+  user-select: none;
+}
+input,
+button,
+textarea,
+:focus {
+  outline: none;
 }
 </style>
