@@ -7,6 +7,10 @@ module.exports = {
       win: {
         icon: "./assets/logo.png",
       },
+      buildOptions: {
+        appId: "com.akcware.video_compressor",
+        files: ["./build/**/*"],
+      },
     },
   },
 };

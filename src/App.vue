@@ -85,6 +85,13 @@ export default {
         this.isCompressing = false;
       }
     });
+    ipcRenderer.on("handbrakeError", (event, arg) => {
+      console.log(arg);
+      this.$notify.error({
+        title: "Error",
+        message: arg.message,
+      });
+    });
     ipcRenderer.on("handbrakeSuccessfullyCompleted", (event, path) => {
       this.$confirm(
         "Compression successfully completed. Want to open file path?",
