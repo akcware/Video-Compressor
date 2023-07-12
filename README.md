@@ -1,4 +1,7 @@
 # video-compressor
+[![Download Video Compressor](https://img.shields.io/sourceforge/dm/videocompressor.svg)](https://sourceforge.net/projects/videocompressor/files/latest/download)
+
+[![Download Video Compressor](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/videocompressor/files/latest/download)
 
 ## Project setup
 ```
